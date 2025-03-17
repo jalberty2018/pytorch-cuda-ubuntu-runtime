@@ -24,8 +24,11 @@ Run the following command to clone the repository and build the image:
 
 ```bash
 git clone https://github.com/jalberty2018/pytorch-cuda-ubuntu-runtime.git
-cd pytorch-cuda-ubuntu-runtime
-python3 build-docker.py --username=<your_dockerhub_username> --tag=<custom_tag>
+
+python3 pytorch-cuda-ubuntu-runtime/build-docker.py \
+--username=<your_dockerhub_username> \
+--tag=<custom_tag> \ 
+pytorch-cuda-ubuntu-runtime
 ```
 
 Note: If you want to push the image with the latest tag, add the --latest flag at the end.
