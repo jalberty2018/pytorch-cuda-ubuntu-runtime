@@ -10,7 +10,7 @@ today_tag = datetime.datetime.now().strftime("%d%m%Y")
 # Creating argparse parser
 parser = argparse.ArgumentParser(description="Build Dockerfile")
 parser.add_argument('docker', type=str, help='Name of the Dockerfile to build - should match a folder name in this repo')
-parser.add_argument('--username', type=str, default="ls250824", help=f"Docker hub user name defaults to ls250824")
+parser.add_argument('--username', type=str, default="name", help=f"Docker hub user name defaults to name")
 parser.add_argument('--tag', type=str, default=today_tag, help=f"Tag to use. Defaults to today's date: {today_tag}")
 parser.add_argument('--latest', action="store_true", help='If specified, we will also tag and push :latest')
 args = parser.parse_args()

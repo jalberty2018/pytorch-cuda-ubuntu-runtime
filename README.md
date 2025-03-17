@@ -1,4 +1,4 @@
-# pytorch-cuda-image-runtime
+# PyTorch CUDA Image Runtime
 
 A lightweight runtime Docker image for PyTorch with CUDA support.
 
@@ -6,37 +6,52 @@ A lightweight runtime Docker image for PyTorch with CUDA support.
 
 This image is built on top of PyTorch’s official Docker images, ensuring compatibility with CUDA and cuDNN.
 
+## Building the Docker Image
+
+You can build and push the image to Docker Hub using the `build-docker.py` script.
+
+### Build Script Options
+
+| Option         | Description                                         | Default                |
+|----------------|-----------------------------------------------------|------------------------|
+| `--username`   | Docker Hub username                                 | Current user           |
+| `--tag`        | Tag to use for the image                            | Today's date           |
+| `--latest`     | If specified, also tags and pushes as `latest`      | Not enabled by default |
+
+### Build & Push Command
+
+Run the following command to clone the repository and build the image:
+
+```bash
+git clone https://github.com/jalberty2018/pytorch-cuda-ubuntu-runtime.git
+cd pytorch-cuda-ubuntu-runtime
+python3 build-docker.py --username=<your_dockerhub_username> --tag=<custom_tag>
+```
+
+Note: If you want to push the image with the latest tag, add the --latest flag at the end.
+
 ## Available Images
 
 ### Image 2.4.1
 
-- Base Image: pytorch/pytorch:2.4.1-cuda12.4-cudnn9-runtime
-- Custom Build: ls250824/pytorch-cuda-ubuntu-runtime:05102024
+Base Image: pytorch/pytorch:2.4.1-cuda12.4-cudnn9-runtime
+
+#### Custom Build: 
+
+```bash
+docker pull ls250824/pytorch-cuda-ubuntu-runtime:05102024
+```
 
 ### Image 2.5.1
 
-- Base Image: pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime
-- Custom Build: ls250824/pytorch-cuda-ubuntu-runtime:19012025
+Base Image: pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime
 
-## Usage
-
-### Pulling the Image
-
-To pull a specific version of the image, use the following command:
+#### Custom Build: 
 
 ```bash
-docker pull ls250824/pytorch-cuda-ubuntu-runtime:<date>
+docker pull ls250824/pytorch-cuda-ubuntu-runtime:19012025
 ```
 
-Replace <date> with the corresponding version date (e.g., 19012025 for 2.5.1).
-
-### Building the Image
-
-To build the image locally, run:
-
-```bash
-python3 build-docker.py pytorch-cuda-ubuntu-runtime
-```
 
 ## Additional Notes
 
