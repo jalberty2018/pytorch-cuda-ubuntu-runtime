@@ -1,10 +1,32 @@
 # PyTorch CUDA Image Runtime
 
-A lightweight runtime Docker image for PyTorch with CUDA support.
+A lightweight runtime Docker base image for PyTorch with CUDA support.
 
 ## Base Image
 
 This image is built on top of PyTorch’s official Docker images, ensuring compatibility with CUDA and cuDNN.
+
+## Available Images
+
+### Image 2.4.1
+
+Base Image: pytorch/pytorch:2.4.1-cuda12.4-cudnn9-runtime
+
+#### Custom Build: 
+
+```bash
+docker pull ls250824/pytorch-cuda-ubuntu-runtime:05102024
+```
+
+### Image 2.5.1
+
+Base Image: pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime
+
+#### Custom Build: 
+
+```bash
+docker pull ls250824/pytorch-cuda-ubuntu-runtime:19012025
+```
 
 ## Building the Docker Image
 
@@ -32,30 +54,3 @@ pytorch-cuda-ubuntu-runtime
 ```
 
 Note: If you want to push the image with the latest tag, add the --latest flag at the end.
-
-## Available Images
-
-### Image 2.4.1
-
-Base Image: pytorch/pytorch:2.4.1-cuda12.4-cudnn9-runtime
-
-#### Custom Build: 
-
-```bash
-docker pull ls250824/pytorch-cuda-ubuntu-runtime:05102024
-```
-
-### Image 2.5.1
-
-Base Image: pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime
-
-#### Custom Build: 
-
-```bash
-docker pull ls250824/pytorch-cuda-ubuntu-runtime:19012025
-```
-
-
-## Additional Notes
-
-- Use nvidia-smi inside the container to verify CUDA support.
