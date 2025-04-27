@@ -1,5 +1,5 @@
 # Use the official PyTorch runtime image with CUDA support
-FROM pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime AS base
+FROM pytorch/pytorch:2.6.0-cuda12.6-cudnn9-runtime AS base
 
 # Set non-interactive mode and timezone
 ARG DEBIAN_FRONTEND=noninteractive
