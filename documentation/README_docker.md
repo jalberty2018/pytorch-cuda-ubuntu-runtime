@@ -47,3 +47,13 @@ Base Image: pytorch/pytorch:2.7.0-cuda12.6-cudnn9-runtime
 ```bash
 docker pull ls250824/pytorch-cuda-ubuntu-runtime:02062025
 ```
+
+### Image 2.7.1
+
+Base Image: pytorch/pytorch:2.7.1-cuda12.6-cudnn9-runtime
+
+#### Custom Build: 
+
+```bash
+docker pull ls250824/pytorch-cuda-ubuntu-runtime:01072025
+```
