@@ -1,5 +1,5 @@
 # Use the official PyTorch runtime image with CUDA support
-FROM pytorch/pytorch:2.7.1-cuda12.8-cudnn9-runtime AS base
+FROM pytorch/pytorch:2.8.0-cuda12.9-cudnn9-runtime AS base
 
 # Set non-interactive mode and timezone
 ARG DEBIAN_FRONTEND=noninteractive
@@ -12,7 +12,7 @@ WORKDIR /workspace
 RUN apt-get update && apt-get --no-install-recommends install -y \
     openssh-server openssh-client \
     git git-lfs libgl1 libglx-mesa0 ffmpeg \
-    tmux wget vim nano mc htop curl lshw pciutils nvtop p7zip-full lsof jq \
+    tmux wget vim nano mc htop curl lshw pciutils nvtop p7zip-full lsof jq ncdu unzip \
     build-essential make cmake \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
