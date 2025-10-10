@@ -1,5 +1,5 @@
 # Use the official PyTorch runtime image with CUDA support
-FROM pytorch/pytorch:2.8.0-cuda12.9-cudnn9-runtime AS base
+FROM pytorch/pytorch:2.8.0-cuda12.9-cudnn9-runtime
 
 # Set non-interactive mode and timezone
 ARG DEBIAN_FRONTEND=noninteractive
@@ -17,5 +17,6 @@ RUN apt-get update && apt-get --no-install-recommends install -y \
 	apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-# Ensure python and pip commands are available
-RUN ln -s /usr/bin/python3 /usr/bin/python && ln -s /usr/bin/pip3 /usr/bin/pip
+# Test
+RUN python -c "import torch, torchvision, torchaudio, triton; \
+print(f'Torch: {torch.__version__}\\nTorchvision: {torchvision.__version__}\\nTorchaudio: {torchaudio.__version__}\\nTriton: {triton.__version__}\\nCUDA available: {torch.cuda.is_available()}\\nCUDA version: {torch.version.cuda}')"

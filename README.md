@@ -8,8 +8,19 @@ A lightweight runtime Docker base image for PyTorch with CUDA support.
 
 This image is built on top of PyTorch’s official Docker images, ensuring compatibility with CUDA and cuDNN.
 
+- [Nvidia CUDA](https://hub.docker.com/r/nvidia/cuda/tags?name=12)
 - [Pytorch.org](https://pytorch.org)
-- [Putorch Images Docker]()
+- [Triton](https://triton-lang.org/main/index.html)
+
+## Setup Latest image
+
+| Component | Version              |
+|-----------|----------------------|
+| OS        | `Ubuntu 22.04 x86_64`|
+| Python    | `3.11.x`             |
+| PyTorch   | `2.8.0`              |
+| CUDA      | `12.9.x `            |
+| Triton    | `2.4.x`              |
 
 ## Available Images
 
@@ -79,6 +90,10 @@ Custom Build:
 
 ```bash
 docker pull ls250824/pytorch-cuda-ubuntu-runtime:22082025
+```
+
+```bash
+docker pull ls250824/pytorch-cuda-ubuntu-runtime:01102025
 ```
 
 ## Building the Docker Image
