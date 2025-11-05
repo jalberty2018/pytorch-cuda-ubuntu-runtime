@@ -12,15 +12,16 @@ This image is built on top of PyTorch’s official Docker images, ensuring compa
 - [Pytorch.org](https://pytorch.org)
 - [Triton](https://triton-lang.org/main/index.html)
 
-## Setup Latest image
+## Setup image
 
 | Component | Version              |
 |-----------|----------------------|
-| OS        | `Ubuntu 22.04 x86_64`|
+| OS        | `Ubuntu 22.04 x86_64` |
 | Python    | `3.11.x`             |
-| PyTorch   | `2.8.0`              |
-| CUDA      | `12.9.x `            |
-| Triton    | `2.4.x`              |
+| PyTorch   | `2.9.0`              |
+| CUDA      | `13.0`             |
+| Triton    | `3.4.0`               |
+
 
 ## Available Images
 
@@ -94,6 +95,16 @@ docker pull ls250824/pytorch-cuda-ubuntu-runtime:22082025
 
 ```bash
 docker pull ls250824/pytorch-cuda-ubuntu-runtime:01102025
+```
+
+### Image 2.9.0
+
+Base Image: pytorch/pytorch:2.9.0-cuda13.0-cudnn9-runtime
+
+Custom Build: 
+
+```bash
+docker pull ls250824/pytorch-cuda-ubuntu-runtime:05112025
 ```
 
 ## Building the Docker Image
