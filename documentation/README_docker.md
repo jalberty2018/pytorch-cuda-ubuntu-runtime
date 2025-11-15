@@ -101,3 +101,13 @@ Custom Build:
 ```bash
 docker pull ls250824/pytorch-cuda-ubuntu-runtime:08112025
 ```
+
+### Image 2.9.1
+
+Base Image: pytorch/pytorch:2.9.1-cuda12.8-cudnn9-runtime
+
+Custom Build: 
+
+```bash
+docker pull ls250824/pytorch-cuda-ubuntu-runtime:15112025
+```
