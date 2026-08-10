@@ -121,3 +121,7 @@ Custom Build:
 ```bash
 docker pull ls250824/pytorch-cuda-ubuntu-runtime:10032026
 ```
+
+```bash
+docker pull ls250824/pytorch-cuda-ubuntu-runtime:10082026
+```
