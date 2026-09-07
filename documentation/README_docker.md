@@ -16,7 +16,7 @@ This image is built on top of PyTorch’s official Docker images, ensuring compa
 
 Base Image: pytorch/pytorch:2.4.1-cuda12.4-cudnn9-runtime
 
-Custom Build: 
+Custom Build:
 
 ```bash
 docker pull ls250824/pytorch-cuda-ubuntu-runtime:05102024
@@ -26,7 +26,7 @@ docker pull ls250824/pytorch-cuda-ubuntu-runtime:05102024
 
 Base Image: pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime
 
-Custom Build: 
+Custom Build:
 
 ```bash
 docker pull ls250824/pytorch-cuda-ubuntu-runtime:19012025
@@ -36,7 +36,7 @@ docker pull ls250824/pytorch-cuda-ubuntu-runtime:19012025
 
 Base Image: pytorch/pytorch:2.6.0-cuda12.6-cudnn9-runtime
 
-Custom Build: 
+Custom Build:
 
 ```bash
 docker pull ls250824/pytorch-cuda-ubuntu-runtime:26042025
@@ -46,7 +46,7 @@ docker pull ls250824/pytorch-cuda-ubuntu-runtime:26042025
 
 Base Image: pytorch/pytorch:2.7.0-cuda12.6-cudnn9-runtime
 
-Custom Build: 
+Custom Build:
 
 ```bash
 docker pull ls250824/pytorch-cuda-ubuntu-runtime:02062025
@@ -64,7 +64,7 @@ docker pull ls250824/pytorch-cuda-ubuntu-runtime:01072025
 
 Base Image: pytorch/pytorch:2.7.1-cuda12.8-cudnn9-runtime
 
-Custom Build: 
+Custom Build:
 
 ```bash
 docker pull ls250824/pytorch-cuda-ubuntu-runtime:05072025
@@ -74,7 +74,7 @@ docker pull ls250824/pytorch-cuda-ubuntu-runtime:05072025
 
 Base Image: pytorch/pytorch:2.8.0-cuda12.9-cudnn9-runtime
 
-Custom Build: 
+Custom Build:
 
 ```bash
 docker pull ls250824/pytorch-cuda-ubuntu-runtime:22082025
@@ -88,7 +88,7 @@ docker pull ls250824/pytorch-cuda-ubuntu-runtime:01102025
 
 Base Image: pytorch/pytorch:2.9.0-cuda13.0-cudnn9-runtime
 
-Custom Build: 
+Custom Build:
 
 ```bash
 docker pull ls250824/pytorch-cuda-ubuntu-runtime:05112025
@@ -106,7 +106,7 @@ docker pull ls250824/pytorch-cuda-ubuntu-runtime:08112025
 
 Base Image: pytorch/pytorch:2.9.1-cuda12.8-cudnn9-runtime
 
-Custom Build: 
+Custom Build:
 
 ```bash
 docker pull ls250824/pytorch-cuda-ubuntu-runtime:15112025
@@ -116,7 +116,7 @@ docker pull ls250824/pytorch-cuda-ubuntu-runtime:15112025
 
 Base Image: pytorch/pytorch:2.10.0-cuda12.8-cudnn9-runtime
 
-Custom Build: 
+Custom Build:
 
 ```bash
 docker pull ls250824/pytorch-cuda-ubuntu-runtime:10032026

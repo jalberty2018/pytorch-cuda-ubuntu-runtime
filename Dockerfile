@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libx11-6 libxext6 libxrender1 libxfixes3 libxi6 libxcursor1 \
     libfontconfig1 libfreetype6 \
     ffmpeg \
-    tmux wget vim nano mc htop curl lshw pciutils nvtop 7zip age lsof jq ncdu unzip \
+    tmux wget vim nano mc htop curl lshw pciutils nvtop 7zip age lsof jq ncdu unzip fio ioping \
     build-essential make cmake apt-utils ninja-build pkg-config libcairo2-dev \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
@@ -27,9 +27,8 @@ print(f'Torch: {torch.__version__}\\nTorchvision: {torchvision.__version__}\\nTo
 
 RUN ldconfig -p | grep -E 'libEGL\.so\.1|libGL\.so\.1' || true
 
-
 # Labels
 LABEL org.opencontainers.image.title="Pytorch cuda runtime base" \
       org.opencontainers.image.description="pytorch cuda runtime base image"   \
       org.opencontainers.image.source="https://hub.docker.com/r/ls250824/pythorch-cuda-ubuntu-runtime" \
-      org.opencontainers.image.licenses="MIT"
+      org.opencontainers.image.licenses=""
