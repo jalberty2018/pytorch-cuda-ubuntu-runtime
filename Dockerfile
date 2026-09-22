@@ -1,5 +1,5 @@
 # Use the official PyTorch runtime image with CUDA support
-FROM pytorch/pytorch:2.10.0-cuda12.8-cudnn9-runtime
+FROM pytorch/pytorch:2.12.1-cuda13.0-cudnn9-runtime
 
 # Set non-interactive mode and timezone
 ARG DEBIAN_FRONTEND=noninteractive
@@ -28,7 +28,7 @@ print(f'Torch: {torch.__version__}\\nTorchvision: {torchvision.__version__}\\nTo
 RUN ldconfig -p | grep -E 'libEGL\.so\.1|libGL\.so\.1' || true
 
 # Labels
-LABEL org.opencontainers.image.title="Pytorch cuda runtime base" \
+LABEL org.opencontainers.image.title="Pytorch 2.12.1 cuda 13.0 runtime base" \
       org.opencontainers.image.description="pytorch cuda runtime base image"   \
       org.opencontainers.image.source="https://hub.docker.com/r/ls250824/pythorch-cuda-ubuntu-runtime" \
       org.opencontainers.image.licenses=""
